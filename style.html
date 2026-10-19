@@ -1,0 +1,100 @@
+<style>
+  :root {
+    color-scheme: light dark;
+    --page-background: #fdfdfd;
+    --page-text: #1a1a1a;
+    --link-text: #174f8a;
+    --panel-background: #f5f5f5;
+    --table-heading-background: #e9e9e9;
+    --border-color: #999;
+  }
+  html { color: var(--page-text); background-color: var(--page-background); }
+  body { box-sizing: border-box; max-width: 100rem; margin: 0 auto; padding: 2rem 22rem 2rem 2rem; line-height: 1.72; font-family: system-ui, sans-serif; }
+  a, a:visited { color: var(--link-text); }
+  h1, h2, h3 { line-height: 1.3; }
+  #TOC { position: fixed; top: 1.5rem; right: max(1.5rem, calc((100vw - 100rem) / 2 + 1.5rem)); box-sizing: border-box; width: 18.5rem; max-height: calc(100vh - 3rem); padding: 0.8rem 1rem; overflow: auto; border: 1px solid var(--border-color); border-radius: 0.5rem; background: var(--panel-background); }
+  #TOC summary { cursor: pointer; font-size: 1.15rem; font-weight: 700; }
+  #TOC[open] summary { margin-bottom: 0.65rem; }
+  #TOC > ul { display: block; margin: 0; padding-left: 0; }
+  #TOC li { margin: 0.22rem 0; }
+  #TOC ul ul { padding-left: 1rem; }
+  #TOC a { display: block; line-height: 1.35; }
+  table { border-collapse: collapse; display: block; overflow-x: auto; }
+  .evm-instructions { width: 100%; }
+  .evm-instructions th:nth-child(-n+4), .evm-instructions td:nth-child(-n+4) { white-space: nowrap; }
+  .evm-instructions th:last-child, .evm-instructions td:last-child { min-width: 28rem; }
+  th, td { border: 1px solid var(--border-color); padding: 0.3rem 0.55rem; vertical-align: top; }
+  th { color: var(--page-text); background: var(--table-heading-background); text-align: left; }
+  math[display="block"] { overflow-x: auto; overflow-y: hidden; margin: 1rem 0; }
+  code { overflow-wrap: anywhere; }
+  .title-block { text-align: center; margin-bottom: 2.5rem; }
+  .abstract { margin: 1.5rem auto 2.5rem; max-width: 64rem; }
+  dt { font-weight: 700; margin-top: 0.6rem; }
+  dd { margin-left: 1.5rem; }
+  span[id], h1, h2, h3 { scroll-margin-top: 1rem; }
+  blockquote, .translation-notice, .translator-note {
+    color: var(--page-text);
+    background: var(--panel-background);
+    border-left: 2px solid var(--border-color);
+    margin: 1rem 0;
+    padding: 0.65rem 1rem;
+  }
+  .translation-notice { margin-bottom: 2rem; }
+  .translator-notes {
+    color: var(--page-text);
+    margin-top: 3rem;
+    padding-top: 0.5rem;
+    border-top: 1px solid var(--border-color);
+  }
+  .translation-notice > :first-child, .translator-note > :first-child { margin-top: 0; }
+  .translation-notice > :last-child, .translator-note > :last-child { margin-bottom: 0; }
+  .translator-note-ref { white-space: nowrap; text-underline-offset: 0.15em; }
+  .translator-note-back { font-size: 0.9em; }
+  .translator-notes, .translator-note { scroll-margin-top: 1rem; }
+  .translator-note:target,
+  span[id^="tnref-"]:target + sup .translator-note-ref {
+    outline: 1px solid var(--link-text);
+    outline-offset: 0.2rem;
+  }
+  .translator-note-ref:focus-visible, .translator-note-back:focus-visible {
+    outline: 2px solid var(--link-text);
+    outline-offset: 0.2rem;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --page-background: #151719;
+      --page-text: #e6e6e6;
+      --link-text: #8fc7ff;
+      --panel-background: #1d2023;
+      --table-heading-background: #292d31;
+      --border-color: #70757a;
+    }
+  }
+  @media (max-width: 72rem) {
+    body { max-width: 76rem; padding: 2rem; }
+    #TOC { position: static; width: auto; max-height: none; margin: 1rem 0 2rem; overflow: visible; }
+    #TOC summary { pointer-events: auto; cursor: pointer; list-style: revert; }
+    #TOC:not([open]) > ul { display: none; }
+    #TOC > ul { columns: 2 20rem; column-gap: 2rem; padding-left: 1.25rem; }
+    #TOC li { break-inside: avoid; }
+  }
+  @media (max-width: 52rem) {
+    body { padding: 1rem; }
+    #TOC > ul { columns: 1; }
+  }
+  @media print {
+    :root {
+      --page-background: #fff;
+      --page-text: #000;
+      --link-text: #000;
+      --panel-background: #fff;
+      --table-heading-background: #eee;
+      --border-color: #777;
+    }
+    body { max-width: none; padding: 0; }
+    #TOC { display: none; }
+    .translation-notice, .translator-note { break-inside: avoid; }
+    .translator-note:target, span[id^="tnref-"]:target + sup .translator-note-ref { outline: none; }
+  }
+</style>
+

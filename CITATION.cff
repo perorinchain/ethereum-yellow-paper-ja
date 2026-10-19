@@ -1,0 +1,16 @@
+cff-version: 1.2.0
+message: "原著の引用情報は preferred-citation に、日本語訳の対応版は README.md に記載している。"
+title: "Ethereum Yellow Paper 日本語版"
+type: software
+abstract: "Shanghai版efc5f9a（2025-02-04）の生成AIを使用した非公式日本語訳。原著者による翻訳・監修を意味しない。"
+license: CC-BY-SA-4.0
+authors:
+  - name: "Ethereum Yellow Paper 日本語訳コントリビューター"
+preferred-citation:
+  type: article
+  title: "Ethereum: A Secure Decentralised Generalised Transaction Ledger"
+  authors:
+    - family-names: Wood
+      given-names: Gavin
+  year: 2025
+  url: "https://github.com/ethereum/yellowpaper/tree/efc5f9a"
